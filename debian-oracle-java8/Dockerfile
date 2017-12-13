@@ -1,11 +1,10 @@
 # 
-# Dockerfile for Container for Debian / Java 8 Applications
-# To run: sudo docker build -t <image_name> .
+# Dockerfile for Container for Debian 9 / Java 8 Applications
+# To run: sudo docker build -t debian/oracle-java8
 #
 
 # base image Debian 9.3
 FROM debian:latest
-
 MAINTAINER Ryan Padilha <ryan.padilha@wplex.com.br>
 
 # install Oracle Java 8

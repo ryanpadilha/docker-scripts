@@ -1,11 +1,10 @@
 # 
 # Dockerfile for Container for CentOS 7 / Java 8 Applications
-# To run: sudo docker build -t <image_name> .
+# To run: sudo docker build -t centos/oracle-java8
 #
 
 # base image CentOS 7
 FROM centos:latest
-
 MAINTAINER Ryan Padilha <ryan.padilha@wplex.com.br>
 
 # install Oracle Java 8
