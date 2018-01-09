@@ -1,6 +1,8 @@
 # 
 # Dockerfile -- Container Image for Debian 9.3 / Oracle JRE Server 8
-# run: docker build -f debian-oracle-server-jre8.dockerfile -t debian/server-jre8 .
+# run  : docker build -f debian-oracle-server-jre8.dockerfile -t debian-server-jre8 .
+# tag  : docker tag cc9671336b34 wplex/debian-server-jre8:latest
+# push : docker push wplex/debian-server-jre8
 #
 
 FROM debian:latest
