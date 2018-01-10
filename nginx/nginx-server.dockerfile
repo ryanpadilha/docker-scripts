@@ -12,8 +12,8 @@ LABEL maintainer="Ryan Padilha <ryan.padilha@wplex.com.br>"
 COPY config/nginx-ec2.conf /etc/nginx/nginx.conf
 COPY config/sites-available_labix.com.br.conf /etc/nginx/sites-available/labix.com.br
 
-RUN mkdir -p /etc/nginx/sites-enabled
-RUN mkdir -p /etc/nginx/sites-available
+RUN mkdir -p /etc/nginx/sites-enabled \
+ && mkdir -p /etc/nginx/sites-available
 
 RUN ln -s /etc/nginx/sites-available/labix.com.br /etc/nginx/sites-enabled/labix.com.br
 
