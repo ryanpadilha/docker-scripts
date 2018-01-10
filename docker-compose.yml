@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  nginx: 
+    build: ./nginx/nginx-server.dockerfile
+    container_name: nginx-server
+    volumes:
+      - certs: /etc/letsencrypt
+      - certs-data: /data/letsencrypt
+    ports:
+      - 80:80
+      - 443:443
+
+ 

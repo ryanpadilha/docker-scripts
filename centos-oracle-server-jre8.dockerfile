@@ -1,5 +1,6 @@
 # 
 # Dockerfile -- Container Image for CentOS 7 / Oracle JRE Server 8
+#
 # run  : docker build -f centos-oracle-server-jre8.dockerfile -t centos-server-jre8 .
 # tag  : docker tag 59b79bf11dba wplex/centos-server-jre8:latest
 # push : docker push wplex/centos-server-jre8
