@@ -1,9 +1,9 @@
 # 
 # Dockerfile -- Container Image for CentOS 7 / Oracle JDK 8
 #
-# run  : docker build -f centos-oracle-java8.dockerfile -t centos-oracle-java8 .
-# tag  : docker tag 70b13b5607fe wplex/centos-oracle-java8:latest
-# push : docker push wplex/centos-oracle-java8
+# build : docker build -f centos-oracle-java8.dockerfile -t centos-oracle-java8 .
+# tag   : docker tag centos-oracle-java8 wplex/centos-oracle-java8:latest
+# push  : docker push wplex/centos-oracle-java8
 #
 
 FROM centos:latest

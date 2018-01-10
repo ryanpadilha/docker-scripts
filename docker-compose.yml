@@ -1,13 +1,32 @@
 version: "3.5"
 services:
   nginx: 
-    build: ./nginx/nginx-server.dockerfile
-    container_name: nginx-server
-    volumes:
-      - certs: /etc/letsencrypt
-      - certs-data: /data/letsencrypt
+    build:
+      context: ./nginx/
+      dockerfile: nginx-server.dockerfile
+    image: nginx-server
+    container_name: nginx_server
     ports:
       - 80:80
       - 443:443
+    networks: 
+      - production-network
+    depends_on: 
+      - wplex-garagem
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /var/wplex:/var/wplex
+  
+  wplex-garagem:
+    image: wplex/wplex-garagem
+    container_name: wplex_garagem
+    ports:
+      - 8080:8080
+    networks: 
+      - production-network
+    volumes:
+      - "/var/wplex/conf/application-garagem.properties:/conf/application.properties"
 
- 
+networks: 
+  production-network:
+    driver: bridge

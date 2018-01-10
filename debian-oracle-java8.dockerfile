@@ -1,9 +1,9 @@
 # 
 # Dockerfile -- Container Image for Debian 9.3 / Oracle JDK 8
 #
-# run  : docker build -f debian-oracle-java8.dockerfile -t debian-oracle-java8 .
-# tag  : docker tag b5a4fa34f69b wplex/debian-oracle-java8:latest
-# push : docker push wplex/debian-oracle-java8
+# build : docker build -f debian-oracle-java8.dockerfile -t debian-oracle-java8 .
+# tag   : docker tag debian-oracle-java8 wplex/debian-oracle-java8:latest
+# push  : docker push wplex/debian-oracle-java8
 #
 
 FROM debian:latest
