@@ -35,6 +35,8 @@ services:
       - 8000:8000
     networks: 
       - production-network
+    volumes:
+      - /var/wplex/logs:/var/wplex/logs
 
 networks: 
   production-network:
