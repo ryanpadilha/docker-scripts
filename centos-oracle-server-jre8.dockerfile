@@ -16,4 +16,5 @@ RUN \
   && tar -zxvf server-jre-8u152-linux-x64.tar.gz -C /usr/lib/jvm \
   && rm -rf server-jre-8u152-linux-x64.tar.gz \
   && update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_152/bin/java 100 \
-  && update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.8.0_152/bin/javac 100
+  && update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.8.0_152/bin/javac 100 \
+  && rm -rf /var/lib/apt/lists/*

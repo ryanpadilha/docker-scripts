@@ -26,6 +26,14 @@ services:
       - production-network
     volumes:
       - "/var/wplex/conf/application-garagem.properties:/conf/application.properties"
+  
+  luxor:
+    image: wplex/luxor-python
+    container_name: luxor_python
+    ports:
+      - 8000:8000
+    networks: 
+      - production-network
 
 networks: 
   production-network:
