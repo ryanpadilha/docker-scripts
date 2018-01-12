@@ -13,6 +13,7 @@ services:
       - production-network
     depends_on: 
       - wplex-garagem
+      - luxor
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt
       - /var/wplex:/var/wplex
