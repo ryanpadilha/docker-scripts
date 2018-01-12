@@ -14,6 +14,8 @@ COPY config/sites-available_labix.com.br.conf /etc/nginx/sites-available/labix.c
 
 RUN mkdir -p /etc/nginx/sites-enabled \
  && mkdir -p /etc/nginx/sites-available \
+ && mkdir -p /var/cache/nginx \
+ && mkdir -p /var/tmp \
  && ln -s /etc/nginx/sites-available/labix.com.br /etc/nginx/sites-enabled/labix.com.br
 
 EXPOSE 80 443
