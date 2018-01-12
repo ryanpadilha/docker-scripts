@@ -29,8 +29,8 @@ services:
       - "/var/wplex/conf/application-garagem.properties:/conf/application.properties"
   
   luxor:
-    image: wplex/luxor-python
-    container_name: luxor_python
+    image: wplex/python-luxor
+    container_name: python_luxor
     ports:
       - 8000:8000
     networks: 
